@@ -1,4 +1,4 @@
-```markdown
+
 # yt-migrate-liked-videos
 
 A minimal, high-throughput **Python + Playwright** tool to re-like a list of YouTube videos on a new account[cite: 12]. 
@@ -176,7 +176,3 @@ python migrate_liked_videos.py --retry-failed
 * **Spot Checks:** The fast engine opens a real watch page every 100 items to ensure likes are actually persisting on your account. If a batch drops or encounters a rate limit, the script unmarks affected entries and falls back to DOM automation.
 
 
-
-```
-
-```
