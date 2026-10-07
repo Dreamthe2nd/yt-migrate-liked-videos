@@ -1,19 +1,19 @@
 
 # yt-migrate-liked-videos
 
-A minimal, high-throughput **Python + Playwright** tool to re-like a list of YouTube videos on a new account[cite: 12]. 
+A minimal, high-throughput **Python + Playwright** tool to re-like a list of YouTube videos on a new account. 
 
-Designed to bypass the standard Google Cloud YouTube Data API quota caps (which limit projects to ~200 likes/day) by utilizing direct **InnerTube API endpoints** and optimized headless browser interactions[cite: 12].
+Designed to bypass the standard Google Cloud YouTube Data API quota caps (which limit projects to ~200 likes/day) by utilizing direct **InnerTube API endpoints** and optimized headless browser interactions.
 
 ---
 
 ## Features
 
-- **InnerTube API & DOM Fallback:** Likes videos rapidly via lightweight internal API calls (~1.0–1.6s per item) with automatic fallback to browser UI automation if validation fails[cite: 12].
-- **Anti-Spam Pacing:** Built-in randomized jitter and turnaround delays to avoid triggering YouTube heuristic velocity limits[cite: 12].
-- **State Persistence:** Tracks progress in a local `liked_state.db` (SQLite) after every video[cite: 12]. Safely resume at any point after Ctrl+C, system closures, or network drops[cite: 12].
-- **Failure Logging:** Problematic links (e.g., deleted or private videos) are logged to `failed_likes.txt` without stalling the run and can be retried automatically[cite: 12].
-- **Safe Authentication:** Stage 1 opens a clean, unautomated Chrome process for manual Google login, preventing bot-detection blocks during sign-in[cite: 12].
+- **InnerTube API & DOM Fallback:** Likes videos rapidly via lightweight internal API calls (~1.0–1.6s per item) with automatic fallback to browser UI automation if validation fails.
+- **Anti-Spam Pacing:** Built-in randomized jitter and turnaround delays to avoid triggering YouTube heuristic velocity limits.
+- **State Persistence:** Tracks progress in a local `liked_state.db` (SQLite) after every video. Safely resume at any point after Ctrl+C, system closures, or network drops.
+- **Failure Logging:** Problematic links (e.g., deleted or private videos) are logged to `failed_likes.txt` without stalling the run and can be retried automatically.
+- **Safe Authentication:** Stage 1 opens a clean, unautomated Chrome process for manual Google login, preventing bot-detection blocks during sign-in.
 
 ---
 
@@ -80,6 +80,8 @@ Move the downloaded `liked_videos.json` file into the root of this project folde
 Run the setup script:
 
 ```bat
+git clone https://github.com/Dreamthe2nd/yt-migrate-liked-videos
+cd yt-migrate-liked-videos
 install.bat
 
 ```
