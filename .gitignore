@@ -1,0 +1,9 @@
+# runtime artifacts - never commit these
+liked_state.db
+chrome_profile/
+failed_likes.txt
+
+# python
+__pycache__/
+*.pyc
+.venv/
